@@ -5,4 +5,10 @@ function learwp_resources() {
 
 add_action('wp_enqueue_scripts', 'learwp_resources');
 
-?>
+
+// Navigation Menus
+
+register_nav_menus(array(
+	'primary' => __( 'Menú Primario'),
+	'footer'  => __( 'Menú Footer'),
+));
