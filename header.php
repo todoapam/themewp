@@ -13,25 +13,32 @@
 
 		<!-- Site Header -->
 		<header class="site-header">
+
+			<!-- hd-search -->
+			<div class="hd-search">
+				<?php get_search_form(); ?>
+			</div>
+			<!-- ./hd-search -->
 			<h1><a href="<?php echo home_url(); ?>">
 				<?php bloginfo('name'); ?></a>
 			</h1>
-			<h5><?php bloginfo('description'); ?></h5>
+
+			<h5><?php bloginfo('description'); ?>
 
 			<?php if ( is_page('pagina-tres') ) { ?>
 				Thank you for viewing our work
 
-			<?php } ?>
+				<?php } ?></h5>
 
-			<nav class="site-nav">
+				<nav class="site-nav">
 
-				<?php
+					<?php
 
-				$args = array(
-					'theme_location' => 'primary'
-				);
+					$args = array(
+						'theme_location' => 'primary'
+					);
 
-				?>
-				<?php wp_nav_menu( $args ); ?>
-			</nav>
-		</header>
+					?>
+					<?php wp_nav_menu( $args ); ?>
+				</nav>
+			</header>
